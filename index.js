@@ -2,11 +2,10 @@ const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const cors = require('cors');
 
-
-const token = '7297115120:AAG9uxCzo1LQu6TgJINOE89ruOodGs73h5o';
+const TOKEN = process.env.TOKEN
 const webAppUrl = 'https://magnificent-otter-516d9f.netlify.app';
 
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(TOKEN, { polling: true });
 const app = express();
 
 app.use(express.json());
